@@ -1,0 +1,443 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-texto);
+}
+:root {
+  --color-primario: #ffae00;
+  --color-primario-hover: #ffe600;
+  --color-secundario: #1a1a1a;
+  --color-acento: #fffb00;
+  --color-texto: #2c2c2c;
+  --color-fondo-claro: #3b3b3b;
+  --color-fondo-oscuro: #222222;
+}
+/***** Main y Footer *****/
+
+main {
+  position: relative;
+  background-color: var(--color-fondo-claro);
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    var(--color-secundario)
+  );
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    var(--color-fondo-oscuro)
+  );
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+/***** Nav *****/
+.navbar {
+  padding: 1rem 2rem;
+  min-height: 70px;
+}
+
+.custom-navbar {
+  background-color: var(--color-fondo-claro);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.05rem;
+  margin-left: 1rem;
+  color: var(--color-primario);
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-primario-hover);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-acento);
+  font-weight: 500;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+}
+/***** Hero *****/
+.hero {
+  position: relative;
+  background-image: url("/Materiales/pngtree-close-up-view-of-a-classic-car-engine-in-workshop-with-image_20394588.webp");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeHero 1.2s ease-out forwards;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  transform: scale(1.05);
+  z-index: 1;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.55) 70%,
+    var(--color-fondo-oscuro) 100%
+  );
+
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: var(--color-primario);
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: var(--color-acento);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+/***** Celular Hero Content *****/
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+section {
+  scroll-margin-top: 80pxad;
+}
+/***** Hero Animacion *****/
+@keyframes fadeHero {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/***** Footer *****/
+.footer {
+  background-color: var(--color-fondo-oscuro);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2rem 1rem;
+}
+
+.footer-slogan {
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+/***** Seccion de Servicios *****/
+.main-servicios {
+  background-color: var(--color-fondo-claro);
+  padding: 4rem 0;
+  min-height: 70vh;
+}
+
+.main-servicios section:first-child {
+  margin-top: -1.5rem;
+}
+
+.servicios-caja {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicios-caja p {
+  flex-grow: 1;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.servicio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-card .card-body {
+  flex-grow: 1;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 10px 30px var(--color-primario);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+.card-body {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-primario-hover);
+  min-height: 140px;
+  height: auto;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+main h1 {
+  color: var(--color-acento);
+}
+main h2 {
+  color: var(--color-primario);
+}
+
+main p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card {
+  opacity: 0;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  animation: fadeIn 1.4s ease forwards;
+  overflow: hidden;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Contacto */
+.contacto-bloque {
+  background-color: var(--color-fondo-oscuro);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3.8rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  will-change: transform;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .contacto-bloque:hover {
+    transform: scale(1.02);
+  }
+}
+
+.contacto-bloque:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgb(255, 238, 0);
+  border-color: var(--color-primario);
+  background-color: grey;
+}
+
+/* Hero Contacto */
+.hero-contacto {
+  position: relative;
+  background-image: url("/Materiales/image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  isolation: isolate;
+  animation: fadeHero 1s ease forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.hero-contacto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: 0;
+  animation: heroZoom 1.4s ease-out forwards;
+}
+
+.contacto-info {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.15);
+    filter: blur(0px);
+  }
+
+  to {
+    transform: scale(1.05);
+    filter: blur(2px);
+  }
+}
+
+@keyframes fadeHero {
+  to {
+    opacity: 1;
+  }
+}
