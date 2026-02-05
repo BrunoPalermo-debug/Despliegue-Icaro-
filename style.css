@@ -112,7 +112,7 @@ footer {
 /***** Hero *****/
 .hero {
   position: relative;
-  background-image: url("/Materiales/pngtree-close-up-view-of-a-classic-car-engine-in-workshop-with-image_20394588.webp");
+  background-image: url("./Materiales/pngtree-close-up-view-of-a-classic-car-engine-in-workshop-with-image_20394588.webp");
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -379,7 +379,7 @@ main p {
 /* Hero Contacto */
 .hero-contacto {
   position: relative;
-  background-image: url("/Materiales/image.jpg");
+  background-image: url("./Materiales/image.jpg.jpg");
   background-size: cover;
   background-position: center;
   height: 40vh;
