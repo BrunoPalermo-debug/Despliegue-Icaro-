@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PCTechnicalNut</title>
+  </head>
+  <body>
+    <header class="bg-dark text-white py-4 shadow">
+      <div class="container">
+        <h1 class="mb-2">🖥️ PC TechnicalNut</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid px-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#compatibilidad">Compatibilidad</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="inicio" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-3">Bienvenido a PC TechnicalNut</h2>
+          <p class="lead">
+            Somos una empresa especializada en el armado y ensamblaje de
+            computadoras personalizadas de alto rendimiento. Nos dedicamos a
+            crear equipos adaptados a tus necesidades específicas, ya sea para
+            gaming, productividad, diseño o edición de contenido.
+          </p>
+        </div>
+      </section>
+      <section id="servicios" class="py-5">
+        <div class="container">
+          <h2 class="mb-4">📦 Servicio de Armado de PC</h2>
+          <p class="mb-4">
+            Utiliza nuestro calculador interactivo para seleccionar los
+            componentes que deseas y calcula el presupuesto total de tu PC
+            personalizada. Recuerda verificar la compatibilidad de tus
+            componentes antes de finalizar tu compra.
+          </p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="mb-0">Selecciona tus Componentes</h5>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="procesador" class="form-label"
+                      >Procesador</label
+                    >
+                    <select class="form-select" id="procesador">
+                      <option value="">-- Selecciona un procesador --</option>
+                      <option value="300000">
+                        Intel Core i5 (300.000 ARG)
+                      </option>
+                      <option value="500000">
+                        Intel Core i7 (500.000 ARG)
+                      </option>
+                      <option value="700000">
+                        Intel Core i9 (700.000 ARG)
+                      </option>
+                      <option value="250000">AMD Ryzen 5 (250.000 ARG)</option>
+                      <option value="550000">AMD Ryzen 7 (550.000 ARG)</option>
+                      <option value="650000">AMD Ryzen 9 (650.000 ARG)</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="motherboard" class="form-label"
+                      >Motherboard</label
+                    >
+                    <select class="form-select" id="motherboard">
+                      <option value="">-- Selecciona una motherboard --</option>
+                      <option value="250000" data-socket="LGA1700">
+                        ASUS Prime Z790 Intel (250.000 ARG)
+                      </option>
+                      <option value="350000" data-socket="LGA1700">
+                        MSI MPG Z790 Intel (350.000 ARG)
+                      </option>
+                      <option value="275000" data-socket="AM5">
+                        ASUS ROG STRIX AM5 AMD (275.000 ARG)
+                      </option>
+                      <option value="37500" data-socket="AM5">
+                        MSI X870 AM5 AMD (375.000 ARG)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="gpu" class="form-label">Tarjeta Gráfica</label>
+                    <select class="form-select" id="gpu">
+                      <option value="">-- Selecciona una GPU --</option>
+                      <option value="750000">
+                        NVIDIA RTX 4070 (300.000 ARG)
+                      </option>
+                      <option value="850000">
+                        NVIDIA RTX 4080 (450.000 ARG)
+                      </option>
+                      <option value="1000000">
+                        NVIDIA RTX 4090 (600.000 ARG)
+                      </option>
+                      <option value="700000">
+                        AMD RX 7700 XT (280.000 ARG)
+                      </option>
+                      <option value="950000">
+                        AMD RX 7900 XT (400.000 ARG)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ram" class="form-label">Memoria RAM</label>
+                    <select class="form-select" id="ram">
+                      <option value="">-- Selecciona RAM --</option>
+                      <option value="300">32GB DDR5 (300 USD)</option>
+                      <option value="400">64GB DDR5 (400 USD)</option>
+                      <option value="600">128GB DDR5 (600 USD)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="almacenamiento" class="form-label"
+                      >Almacenamiento</label
+                    >
+                    <select class="form-select" id="almacenamiento">
+                      <option value="">-- Selecciona almacenamiento --</option>
+                      <option value="150">1TB SSD NVMe (150 USD)</option>
+                      <option value="250">2TB SSD NVMe (250 USD)</option>
+                      <option value="400">4TB SSD NVMe (400 USD)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="fuente" class="form-label"
+                      >Fuente de Poder</label
+                    >
+                    <select class="form-select" id="fuente">
+                      <option value="">-- Selecciona fuente --</option>
+                      <option value="200">750W 80+ Gold (200 USD)</option>
+                      <option value="300">1000W 80+ Platinum (300 USD)</option>
+                      <option value="400">1200W 80+ Titanium (400 USD)</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-success w-100">
+                    Calcular Presupuesto
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header bg-success text-white">
+                  <h5 class="mb-0">Resumen de tu PC</h5>
+                </div>
+                <div class="card-body" id="resumenPC">
+                  <p class="text-muted">
+                    Selecciona componentes y presiona "Calcular Presupuesto"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="compatibilidad" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="mb-4">🔗 Verificador de Compatibilidad</h2>
+          <p class="mb-4">
+            Verifica si tus componentes son compatibles. Por ejemplo, comprueba
+            si un procesador Intel o AMD es compatible con tu motherboard
+            seleccionada.
+          </p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-header bg-info text-white">
+                  <h5 class="mb-0">Verificar Compatibilidad</h5>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="componenteA" class="form-label"
+                      >Selecciona Procesador</label
+                    >
+                    <select class="form-select" id="componenteA">
+                      <option value="">-- Selecciona procesador --</option>
+                      <option value="Intel_LGA1700">
+                        Intel (Socket LGA1700)
+                      </option>
+                      <option value="AMD_AM5">AMD Ryzen (Socket AM5)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="componenteB" class="form-label"
+                      >Selecciona Motherboard</label
+                    >
+                    <select class="form-select" id="componenteB">
+                      <option value="">-- Selecciona motherboard --</option>
+                      <option value="Motherboard_LGA1700">
+                        Motherboard LGA1700
+                      </option>
+                      <option value="Motherboard_AM5">Motherboard AM5</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-info w-100">
+                    Verificar Compatibilidad
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header bg-warning">
+                  <h5 class="mb-0">Resultado</h5>
+                </div>
+                <div class="card-body" id="resultadoCompatibilidad">
+                  <p class="text-muted">
+                    Selecciona componentes y presiona verificar
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>📍 Ubicación</h5>
+            <p>
+              Calle Principal 123<br />
+              Madrid, España 28001<br />
+              CP: 28001
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>📞 Contacto</h5>
+            <p>
+              Teléfono: +34 911 234 567<br />
+              Email: info@pcmasterbuild.com<br />
+              WhatsApp: +34 600 123 456
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>🕐 Horario</h5>
+            <p>
+              Lunes - Viernes: 09:00 - 18:00<br />
+              Sábado: 10:00 - 14:00<br />
+              Domingo: Cerrado
+            </p>
+          </div>
+        </div>
+        <hr class="bg-secondary" />
+        <div class="text-center">
+          <p>&copy; 2026 PC Master Build. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+</html>
