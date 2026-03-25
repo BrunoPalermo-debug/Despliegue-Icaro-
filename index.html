@@ -37,6 +37,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#compatibilidad">Compatibilidad</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#galeria">Galería</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -201,7 +204,11 @@
             <div class="col-md-6 mb-4">
               <div class="card">
                 <div class="card-header bg-info text-white">
-                  <h5 class="mb-0">Verificar Compatibilidad</h5>
+                  <h5 class="mb-0">
+                    <button id="btnCompatibilidad" class="btn btn-info w-100">
+                      Verificar Compatibilidad
+                    </button>
+                  </h5>
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
@@ -283,6 +290,15 @@
           <p>&copy; 2026 PC Technical Nut. Todos los derechos reservados.</p>
         </div>
       </div>
+      <section id="galeria" class="py-5">
+        <div class="container">
+          <h2 class="mb-4">🖼️ Galería de Builds</h2>
+          <p class="mb-4">
+            Mira algunos de nuestros armados personalizados para inspirarte.
+          </p>
+          <div class="row" id="contenedorGaleria"></div>
+        </div>
+      </section>
     </footer>
   </body>
   <script src="app.js"></script>
